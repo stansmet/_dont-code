@@ -1,0 +1,78 @@
+{% extends 'layout.twig.html' %}
+
+{% block content %}
+{% if lang == 'ru' %}
+<h1>Бро, не пиши сегодня код блять!</h1>
+<div class="center"><p>13 причин не писать код сегодня:</p></div>
+<ul class="causes">
+    <li>Ты уже заебался писать код!(нет серьезно, сколько можно?!)</li>
+    <li>Ты не создашь новых багов!</li>
+    <li>Ты уменьшишь риск геморроя на 17%!</li>
+    <li>Нужно пригласить Ее на свидание!</li>
+    <li>Нужно повеселиться с друзьями!</li>
+    <li>Ты перестанешь выглядеть как унылое гавно!</li>
+    <li>Нужно уменьшить пузо в тренажерке!</li>
+    <li>Мир не рухнет если ты не будешь писать код сегодня!</li>
+    <li>Сегодня выходной или почти выходной!</li>
+    <li>Ты наконец то выспишься!</li>
+    <li>Ебаться нужно не только с кодом, сделай это с девушкой наконец!</li>
+    <li>Всё равно всё понятно - напишешь завтра!</li>
+    <li>Ничего не понятно! Разберёшься завтра!</li>
+</ul>
+{% elseif lang == 'en' %}
+<h1>Bro, don’t fucking code today!</h1>
+<div class="center"><p>13 reasons not to code today:</p></div>
+<ul class="causes">
+    <li>Coding fucks your brain out! (for crying out loud!)</li>
+    <li>You won’t make new bugs!</li>
+    <li>You’ll reduce the risk of hemorrhoids by 17%!</li>
+    <li>You should ask HER out!</li>
+    <li>You’ll spice up your life!</li>
+    <li>You should have fun with your friends!</li>
+    <li>You’ll stop looking like a sad trash.</li>
+    <li>You should go to the gym and get rid of your belly!</li>
+    <li>The World won’t crash down if you don’t code today!</li>
+    <li>It’s a day off today, or it’s just coming up!</li>
+    <li>You’ll feel like a Normal man again!</li>
+    <li>You’ll relax and gain energy!</li>
+    <li>You’ll stop thinking about suicide! :))</li>
+</ul>
+{% elseif lang == 'de' %}
+<h1>Bro, schreibe keinen Scheißcode heute!</h1>
+<div class="center"><p>13 Gründe, heute nicht zu codieren:</p></div>
+<ul class="causes">
+    <li>Das Codieren geht dir auf die Eier! (Wie lange noch möglich?)</li>
+    <li>Du wirst neue Programmfehler nicht machen!</li>
+    <li>Du wirst das Hämorrhoiden-Risiko um 17% reduzieren!</li>
+    <li>Du sollst SIE zu einem Stelldichein einladen!</li>
+    <li>Du wirst Abwechslung in dein Leben bringen!</li>
+    <li>Du sollst Spaß mit deinen Freunden haben!</li>
+    <li>Du wirst aufhören, wie ein Trauerkloß auszusehen.</li>
+    <li>Du sollst zum Kraftraum gehen und deinen Bauch loswerden!</li>
+    <li>Die Welt wird nicht umstürzen, wenn du heute nicht codierst!</li>
+    <li>Es ist ein arbeitsfreier Tag heute, oder der ist bald!</li>
+    <li>Du wirst zu einem Normalmensch wieder sein!</li>
+    <li>Du wirst entspannen und Energie gewinnen!</li>
+    <li>Du wirst aufhören, an Selbstmord zu denken! :))</li>
+</ul>
+{% elseif lang == 'fr' %}
+<h1>Bro n'écris pas le code de zut aujourd'hui!</h1>
+<div class="center"><p>13 l'argument de ne pas écrir le code aujourd'hui:</p></div>
+<ul class="causes">
+    <li>Tu en as marre d'écrir le code (Non, sérieusement, comment peut-on?)</li>
+    <li>Tu ne crées pas de nouveax  bogues</li>
+    <li>Tu diminueras le risque d'avoir les hémorroïdes de 17 %</li>
+    <li>Il faut l' inviter au rendez-vous</li>
+    <li>Tu mettras la variété dans sa vie!</li>
+    <li>Il faut se distraire avec les amis</li>
+    <li>Vous vous arrêtez à ressembler à une merde triste!</li>
+    <li>Il faut aller au gymnastic pour ne pas avoir plus le bedon</li>
+    <li>Le monde restera vivent si tu n'écriras le code aujourd'hui</li>
+    <li>Aujourd'hui nous sommes un jour férié ou presque férié</li>
+    <li>Tu te sentiras de nouveau l'homme blanc!</li>
+    <li>Tu te reposeras et tu accumuleras de l'énergie!</li>
+    <li>Tu arrêteras de penser au suicide! :))</li>
+</ul>
+{% endif %}
+
+{% endblock %}

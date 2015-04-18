@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html xmlns:fb="http://ogp.me/ns/fb#">
+
+<head>
+    <title>{{ title }}</title>
+    <meta name="keywords" content="{{ meta.keywords }}" />
+    <meta name="description" content="{{ meta.description }}" />
+    <meta property="og:title" content="{{ meta.title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://dont-code.com" />
+    <meta property="og:image" content="http://dont-code.com/preview.png" />
+    <meta property="og:site_name" content="{{ meta.site_name }}" />
+    <meta property="fb:admins" content="100001740766995" />
+
+    <meta name="google-site-verification" content="ff6TlrapNXi1djSXR4etNsiBKPs8UqIz_d9k3IY6RnA" />
+    <meta http-equiv="Content-Language" content="{{ lang }}">
+    <meta name="author" content="Stanislaw Smetanin" />
+    <meta name="contact" content="stanislaw@smetanin-online.name" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="icon" type="image/png" href="/favicon.ico" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://userapi.com/js/api/openapi.js?45"></script>
+    <script type="text/javascript">
+      VK.init({apiId: 2719054, onlyWidgets: true});
+    </script>
+    <script type="text/javascript">
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
+    <script type="text/javascript" src="main.js"></script>
+    <!--<link type="text/css" href="normalize.css" rel="stylesheet">-->
+    <link type="text/css" href="style.css" rel="stylesheet">
+	<!--[if IE]>
+		<script type="text/javascript" src="html5.js"></script>
+	<![endif]-->
+    <script type="text/javascript">
+        var msg = '{{ links.message }}';
+        var your_email = '{{ links.your_email }}';
+    </script>
+</head>
+
+<body>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27788786-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/{{ locale }}/all.js#xfbml=1&appId=280196352033329";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+		<div class="wrapper">
+			<header>
+				<nav>
+					<ul>
+						<li><a href="#" id="feedbackLink"><span>{{ links.feedback }}</span></a></li>
+						<!--<li><a href=""><span>{{ links.swearing_off }}</span></a></li>-->
+					</ul>
+				</nav>
+				<p class="cb"></p>
+				
+				<!-- LINE-TOP -->
+				<div class="line-top">
+					<div class="button-top">
+						<div class="social-b">
+							<ul class="likes-list">
+								<li>
+									<div class="g-plusone"></div>
+								</li>
+								<li>
+                                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://dont-code.com" data-count="none" data-text="{{ twText }}" data-lang="{{ lang }}" data-related="smetanin_online">Tweet</a>
+                                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+								</li>
+								<li style="margin-top:-10px;">
+                                    <div id="vk_like"></div>
+                                    <script type="text/javascript">
+                                        VK.Widgets.Like("vk_like", {type: "mini", height: 20});
+                                    </script>
+								</li>
+								<li>
+                                    <fb:like href="http://dont-code.com" layout="button_count" show_faces="true"></fb:like>
+								</li>
+							</ul>
+						</div>
+						
+						<ul class="lang">
+							<li class="{{ lang == 'ru' ? 'active' : '' }} ru"><a href="/ru.html" title="Русский">Русский</a></li>
+							<li class="{{ lang == 'en' ? 'active' : '' }} en"><a href="/en.html" title="English">English</a></li>
+							<li class="{{ lang == 'fr' ? 'active' : '' }} fr"><a href="/fr.html" title="Française">Française</a></li>
+							<li class="{{ lang == 'de' ? 'active' : '' }} de"><a href="/de.html" title="Deutsch">Deutsch</a></li>
+						</ul>
+						<p class="cb"></p>
+					</div>
+				</div>
+			</header>
+			
+			<!-- ARTICLE -->
+			<article>
+                {% block content %} {% endblock %}
+				
+				<div class="add-causes">
+					<h2>{{ links.add_reason }}</h2>
+					<form method="post" id="reasonForm">
+						<!--<div class="wrap-field">
+							<div class="wrap-field-b">-->
+								<textarea rows="" cols="" name="message" onblur="if(this.value=='') this.value=msg;" onfocus="if(this.value==msg) this.value='';">{{ links.message }}</textarea>
+							<!--</div>
+						</div>-->
+						<input type="submit" id="send" value="{{ links.add }}" />
+						<p class="cb"></p>
+					</form>
+                    <p id="ar-success-msg" class="hide ar-msg">{{ links.success_reason }}</p>
+                    <p id="ar-error-msg" class="hide ar-msg">{{ links.error_reason }}</p>
+				</div>
+			</article>
+			<!-- END ARTICLE -->
+			
+			<div class="hFooter"></div>
+		</div>
+		
+		<p class="cb"></p>
+		
+		<footer>
+			<div class="line-bottom">
+				<div class="copyright"><p>&copy; 2011 &nbsp;<a href="http://smetanin-online.name">smetanin-online.name</a></p></div>
+			</div>
+		</footer>
+		<img id="bro" alt="" src="img/bro.png"/>
+
+        <form method="post" action="/add-feedback.json" id="feedbackForm" class="hide">
+            <div class="title">
+                <p>{{ links.send }} {{ links.message }}</p>
+                <a href="#" class="close"></a>
+            </div>
+            <br clear="both" />
+            <div class="elems">
+                <input type="text" name="email" onblur="if(this.value=='') this.value=your_email;" onfocus="if(this.value==your_email) this.value='';" value="{{ links.your_email }}" /><br />
+                <textarea rows="" cols="" name="message" onblur="if(this.value=='') this.value=msg;" onfocus="if(this.value==msg) this.value='';">{{ links.message }}</textarea>
+                <br clear="both" />
+                <button type="submit" id="send-feedback">{{ links.send }}</button>
+            </div>
+            <p id="sf-success-msg" class="hide ar-msg sf-msg">{{ links.success_feedback }}</p>
+            <p id="sf-error-msg" class="hide ar-msg sf-msg">{{ links.error_reason }}</p>
+        </form>
+
+        <div class="overlay hide"></div>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter11401822 = new Ya.Metrika({id:11401822, enableAll: true, trackHash:true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="//mc.yandex.ru/watch/11401822" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+</body>
+</html>
